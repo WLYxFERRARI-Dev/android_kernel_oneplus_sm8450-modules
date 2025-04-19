@@ -1,3 +1,4 @@
+KBUILD_CFLAGS += -Wno-error=fortify-source
 # Makefile for use with Android's kernel/build system
 
 KBUILD_OPTIONS += CAMERA_KERNEL_ROOT=$(KERNEL_SRC)/$(M)
