@@ -1299,7 +1299,6 @@ int cam_flash_i2c_pkt_parser(struct cam_flash_ctrl *fctrl, void *arg)
 			csl_packet->header.request_id);
 		goto update_req_mgr;
 	}
-<<<<<<< HEAD
 	case CAM_FLASH_PACKET_OPCODE_STREAM_OFF: {
 		if (fctrl->streamoff_count > 0) {
 			cam_mem_put_cpu_buf(config.packet_handle);
@@ -1326,8 +1325,6 @@ int cam_flash_i2c_pkt_parser(struct cam_flash_ctrl *fctrl, void *arg)
 		}
 		break;
 	}
-=======
->>>>>>> c63c952e65 (camera-drivers: Rollback cam_flash driver for now)
 	default:
 		CAM_ERR(CAM_FLASH, "Wrong Opcode : %d",
 			(csl_packet->header.op_code & 0xFFFFFF));
