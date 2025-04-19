@@ -1967,6 +1967,7 @@ int cam_flash_release_dev(struct cam_flash_ctrl *fctrl)
 		fctrl->bridge_intf.link_hdl = -1;
 		fctrl->bridge_intf.session_hdl = -1;
 		fctrl->last_flush_req = 0;
+		fctrl->streamoff_count = 0;
 	}
 
 	return rc;

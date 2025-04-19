@@ -189,6 +189,7 @@ struct cam_flash_func_tbl {
  * @io_master_info      : Information about the communication master
  * @i2c_data            : I2C register settings
  * @last_flush_req      : last request to flush
+ * @streamoff_count     : Count to hold the number of times stream off called
  */
 struct cam_flash_ctrl {
 	char device_name[CAM_CTX_DEV_NAME_MAX_LENGTH];
@@ -217,6 +218,7 @@ struct cam_flash_ctrl {
 	struct camera_io_master             io_master_info;
 	struct i2c_data_settings            i2c_data;
 	uint32_t                            last_flush_req;
+	uint32_t                            streamoff_count;
 #ifdef OPLUS_FEATURE_CAMERA_COMMON
 	const char *                        flash_name;
 	/*Add by Fangyan @ Camera 2020/08/17 for flash current*/
